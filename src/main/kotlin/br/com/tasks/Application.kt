@@ -2,6 +2,7 @@ package br.com.tasks
 
 import br.com.tasks.di.databaseModule
 import br.com.tasks.di.repositoryModule
+import br.com.tasks.di.serviceModule
 import br.com.tasks.plugins.configureHTTP
 import br.com.tasks.plugins.configureMonitoring
 import br.com.tasks.plugins.configureRouting
@@ -20,7 +21,8 @@ fun Application.module() {
     install(Koin){
         modules(
             databaseModule,
-            repositoryModule
+            repositoryModule,
+            serviceModule
         )
     }
 
